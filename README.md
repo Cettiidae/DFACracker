@@ -1,4 +1,4 @@
-<center>![TIM截图20191026144041.png](https://picdn.iinformation.info/2019/10/26/5fba4ed7a237e.png)</center>
+![TIM截图20191026144041.png](https://picdn.iinformation.info/2019/10/26/5fba4ed7a237e.png)
 # DFACracker
 自用DFAssist国服版本一键破解器
 # 使用帮助
