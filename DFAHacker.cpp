@@ -62,7 +62,6 @@ int CheckReplace(string filename, string ReplaceContent, string ChangeContent) {
 		ofstream out;
 		out.open(filename);
 		out.flush();
-		cout << strFileData << endl;
 		out << strFileData;
 		out.close();
 	}
@@ -70,7 +69,9 @@ int CheckReplace(string filename, string ReplaceContent, string ChangeContent) {
 
 int main()
 {
-	std::cout << "按下任意键检查DFA程序配置是否存在！\n";
+	std::cout << "+——————————————————+\n";
+	std::cout << "| 按下任意键检查DFA程序配置是否存在！|\n";
+	std::cout << "+——————————————————+\n";
 	system("pause");
 	wchar_t buffer[MAX_PATH];
 	DWORD code = GetEnvironmentVariable(L"APPDATA", buffer, MAX_PATH);
@@ -81,17 +82,24 @@ int main()
 	ifstream _file(path, ios::in);
 	if (!_file)
 	{
-		cout << path << " DFA配置文件读取失败，请确保您已经运行了一次DFA并正确彻底地关闭。" << endl;
+		std::cout << "+————————————————————————————————+\n";
+		cout << "| DFA配置文件读取失败，请确保您已经运行了一次DFA并正确彻底地关闭.|\n" << endl;
+		std::cout << "+————————————————————————————————+\n";
+		system("pause");
 	}
 	else
 	{
-		cout << path << " DFA数据确认完成，即将执行修改。" << endl;
+		std::cout << "+——————————————————+\n";
+		cout << "|   DFA数据确认完成，即将执行修改。  |\n";
+		std::cout << "+——————————————————+\n";
 		system("pause");
 		string filename = path;
 		string a = "crack=0";
 		string b = "crack=1";
 		CheckReplace(filename, a, b);
+		std::cout << "+——————————————————+\n";
+		std::cout << "+            DFA修改成功             +\n";
+		std::cout << "+——————————————————+\n";
 		system("pause");
-		return 0;
 	}
 }
